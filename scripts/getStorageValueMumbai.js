@@ -1,17 +1,6 @@
 require('dotenv').config();
 const hre = require("hardhat");
 const { ethers } = hre;
-const { encryptDataField, decryptNodeResponse } = require("@swisstronik/swisstronik.js");
-
-const sendShieldedQuery = async (provider, destination, data) => {
-  const rpclink = hre.network.config.url;
-  const [encryptedData, usedEncryptedKey] = await encryptDataField(rpclink, data);
-  const response = await provider.call({
-    to: destination,
-    data: encryptedData,
-  });
-  return await decryptNodeResponse(rpclink, response, usedEncryptedKey);
-};
 
 async function main() {
   // Deployed smart contract address on the Mumbai Network

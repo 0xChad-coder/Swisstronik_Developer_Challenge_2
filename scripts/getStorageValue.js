@@ -9,17 +9,13 @@ async function main() {
   const providerSwisstronik = new ethers.providers.JsonRpcProvider("https://json-rpc.testnet.swisstronik.com/");
   const providerMumbai = new ethers.providers.JsonRpcProvider("https://polygon-testnet.public.blastapi.io");
 
-  // Replace with your actual private key
-  const walletSwisstronik = new ethers.Wallet("1774500d5d6d519bd2490d5798ee45c9eb204659cd5ab862a9a6031628f6c742", providerSwisstronik);
-  const walletMumbai = new ethers.Wallet("1774500d5d6d519bd2490d5798ee45c9eb204659cd5ab862a9a6031628f6c742", providerMumbai);
-  
-  const valueSwisstronik = await walletSwisstronik.provider.send("eth_getStorageAt", [
+  const valueSwisstronik = await providerSwisstronik.send("eth_getStorageAt", [
     contractAddress,
     "0x0", // Slot #0 for the state variable
     "latest",
   ]);
 
-  const valueMumbai = await walletMumbai.provider.send("eth_getStorageAt", [
+  const valueMumbai = await providerMumbai.send("eth_getStorageAt", [
     contractAddress,
     "0x0", // Slot #0 for the state variable
     "latest",
