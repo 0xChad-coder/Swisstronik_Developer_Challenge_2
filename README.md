@@ -41,7 +41,7 @@ PriavteStateVariable Contract: [0x5BEdcDE6B1047B46b6f815c63faa696466c46efa](http
 1. Ensure you have configured your Hardhat environment, as mentioned in the README.
 2. Open your terminal and navigate to the project directory.
 3. Replace the `contractAddress` variable with the actual contract address on the Swisstronik network.
-   const contractAddress = "0xYourContractAddress"; // Replace with the actual contract address on the Swisstronik network
+   - const contractAddress = "0xYourContractAddress"; // Replace with the actual contract address on the Swisstronik network
 4. Run the following commands to execute the script:
    ```shell
    npx hardhat run scripts/getStorageValueSwisstronik.js --network swisstronik
@@ -57,7 +57,7 @@ PriavteStateVariable Contract: [0x5BEdcDE6B1047B46b6f815c63faa696466c46efa](http
 1. Ensure you have configured your Hardhat environment, as mentioned in the README.
 2. Open your terminal and navigate to the project directory.
 3. Replace the `contractAddress` variable with the actual contract address on the Mumbai network.
-   const contractAddress = "0xYourContractAddress"; // Replace with the actual contract address on the Mumbai network
+   - const contractAddress = "0xYourContractAddress"; // Replace with the actual contract address on the Mumbai network
 4. Run the following commands to execute the script:
    ```shell
    npx hardhat run scripts/getStorageValueMumbai.js --network polygon_mumbai
@@ -75,10 +75,10 @@ PriavteStateVariable Contract: [0x5BEdcDE6B1047B46b6f815c63faa696466c46efa](http
 2. Open your terminal and navigate to the project directory.
 
 3. Replace the `contractAddress` variable with the actual contract address.
-   const contractAddress = "0xYourContractAddress"; // Replace with the actual contract address
+   - const contractAddress = "0xYourContractAddress"; // Replace with the actual contract address
 
 4. Define the slot variable as "0x0" to specify slot #0 for the state variable.
-    const slot = "0x0"; // Slot #0 for the state variable
+    - const slot = "0x0"; // Slot #0 for the state variable
 
 5. Run the following command to execute the script:
    ```shell
@@ -110,11 +110,8 @@ PriavteStateVariable Contract: [0x5BEdcDE6B1047B46b6f815c63faa696466c46efa](http
 7. The above scripts will print the value to the console.
 
 ## Requirements
-Node.js
-Hardhat (https://hardhat.org/)
-
-
-
+- Node.js
+- Hardhat (https://hardhat.org/)
 
 # Sample Hardhat Project
 
